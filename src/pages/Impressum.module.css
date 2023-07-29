@@ -1,0 +1,105 @@
+.slider {
+    position: relative;
+    z-index: 1;
+    background: var(--bg-mainGradient);
+    position: relative;
+    background: linear-gradient(49deg, blue, #169ce5, #cf15ff);
+    background-size: 200% 100%;
+    animation: gradient-animation 5s ease infinite;
+    min-width: 100%;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+  
+    50% {
+        background-position: 100% 50%;
+    }
+  
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gradient-animations {
+    0% {
+        background-position: 0% 50%;
+    }
+  
+    50% {
+        background-position: 100% 50%;
+    }
+  
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  .slider .container {
+    max-width: 1300px;
+    display: flex;
+    margin: 0 auto;
+    padding: 5em 8px;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  
+  .slider .container .sliderLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+  
+    .title {
+      color: #fff;
+      font-family: "Alfa Slab One";
+      font-weight: 100;
+      font-size: 55px;
+      margin-bottom: 4px;
+    }
+  
+    .sliderDescription {
+      color: #ffffffc1;
+      font-family: "Raleway";
+      font-weight: 100;
+      font-size: 26px;
+      margin: 0 0 15px 0;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      text-align: center;
+  
+      .title {
+        font-size: 40px;
+      }
+  
+      .sliderDescription {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .slider .container .sliderRight {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    .sliderImage {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin-bottom: -5em;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      align-items: center;
+      padding-top: 5em;
+  
+      .sliderImage {
+        max-width: 80%;
+      }
+    }
+  }

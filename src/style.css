@@ -1,0 +1,71 @@
+/**** Variables ****/
+:root {
+    --bg-mainGradientFb: #2F7AED;
+    --bg-mainGradient: linear-gradient(90deg, rgba(47, 122, 237, 1) 0%, rgba(19, 224, 251, 1) 100%);
+    --bg-mainGradientReverse: linear-gradient(90deg, rgba(19, 224, 251, 1) 0%, rgba(47, 122, 237, 1) 100%);
+    --bg-white: #fff;
+    --bg-lightblue: rgba(25, 201, 248, 1);
+    --white: #fff;
+    --black: #000;
+    --primary: #2F7AED;
+    --secondary: #2b2b2b;
+    --title-font: "Alfa Slab One";
+    --text-font: "Raleway";
+}
+
+
+
+@font-face {
+    font-family: alfa slab one;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Alfa Slab One'), url(./assets/fonts/AlfaSlabOne-Regular.woff) format('woff');
+    font-display: block;
+}
+
+@font-face {
+    font-family: raleway;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), url(./assets/fonts/Raleway-Regular.woff) format('woff');
+    font-display: block;
+}
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    transition: .5s;
+    font-size: 14px;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.invertWh {
+    filter: brightness(0) invert(1);
+}
+
+main {
+    position: relative;
+    top: 136px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

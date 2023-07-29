@@ -1,0 +1,307 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: 0.5s;
+
+}
+
+
+.topbar {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0;
+    background: linear-gradient(49deg, blue, #169ce5, #cf15ff);
+    background-size: 200% 100%;
+    animation: gradient-animation 6s ease infinite;
+    transition: 0.5s;
+
+    .topbarLink {
+        color: #fff;
+
+        .topbarLink:hover {
+            color: black;
+        }
+    }
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient-animations {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.topbar .container {
+    max-width: 1300px;
+    height: auto;
+    padding: 8px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: unset;
+}
+
+.topbarMail {
+    width: 50%;
+    padding: 5px 0;
+}
+
+.topbarPhone {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+}
+
+.topbar a {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.topbar a:hover {
+    color: #083970;
+}
+
+.topbarPhone a {
+    flex-direction: row-reverse;
+}
+
+
+
+/******** NAVIGATION **********/
+
+.navigation {
+    background: #fff;
+    padding: 1.5em 0;
+}
+
+.navigation .container {
+    max-width: 1300px;
+    padding: 0 8px;
+    margin: 0 auto;
+}
+
+.navigation .container a {
+    color: rgb(155, 155, 155);
+    font-family: "Raleway";
+}
+
+.navigation .container a:hover {
+    color: var(--primary);
+}
+
+.active {
+    font-weight: 900;
+    color: var(--primary) !important;
+}
+
+.header .navbar {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1340px;
+    margin: 0 auto;
+    transition: .6s;
+}
+
+.header .navbar .brand {
+    font-family: inherit;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: inherit;
+    text-transform: uppercase;
+    color: #252a32;
+    display: flex;
+}
+
+.logo {
+    transition: .6s;
+}
+
+.header .navbar .menu {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .navbar .menuItem:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.header .navbar .wrapper {
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**** MENU ****/
+
+@media only screen and (max-width: 1000px) {
+
+    .header .navbar .wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0vh;
+        z-index: -1;
+        opacity: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: linear-gradient(301deg, blue, #169ce5, #cf15ff);
+        background-size: 180% 180%;
+        animation: gradient-animation 4s ease infinite;
+    }
+
+    .header .navbar .wrapper .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        width: 100%;
+    }
+
+    .menuActive {
+        z-index: 99 !important;
+        height: 100% !important;
+        opacity: 1 !important;
+    }
+
+    .header .navbar .wrapper .menuItem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1.5em 0 0 0;
+    }
+
+    .header .navbar .wrapper .menuItem:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .header .navbar .wrapper .menuItem a {
+        opacity: 1;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: .5s;
+    }
+
+    .header .navbar .navToggle {
+        display: block;
+        position: relative;
+        right: -12px;
+        top: 10px;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .header .navbar .navToggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        border-radius: 2px;
+        margin-left: 4px;
+        transition: .6s;
+    }
+
+    .mobileActive {
+        color: var(--primary) !important;
+        background: white;
+    }
+
+    .burgerClose {
+        transform: translateY(6px) rotate(230deg);
+        background: #fff !important;
+    }
+
+    .burgerClose:nth-of-type(2) {
+        display: none !important;
+    }
+
+    .burgerClose:nth-of-type(3) {
+        transform: translateY(0px) rotate(130deg);
+        background: #fff !important;
+    }
+
+    .burgerScroll {
+        background: #000 !important;
+    }
+
+    .navToggle {}
+
+    .navToggle span {
+        margin: 4px;
+    }
+
+}

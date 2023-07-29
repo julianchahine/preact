@@ -1,0 +1,442 @@
+.slider {
+    position: relative;
+    z-index: 1;
+    background: var(--bg-mainGradient);
+    position: relative;
+    background: linear-gradient(49deg, blue, #169ce5, #cf15ff);
+    background-size: 200% 100%;
+    animation: gradient-animation 6s ease infinite;
+    min-width: 100%;
+  
+    .container {
+      max-width: 1300px;
+      display: flex;
+      margin: 0 auto;
+      padding: 8em 8px 13em 8px;
+  
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding-bottom: 7em;
+      }
+    }
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gradient-animations {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .circlesImage:nth-of-type(1) {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 880px;
+    transform: scale(-1, -1);
+    z-index: -1;
+    opacity: .8;
+  
+    @media screen and (max-width: 1000px) {
+      opacity: .35;
+    }
+  }
+  
+  .circlesImage:nth-of-type(2) {
+    position: absolute;
+    left: 0;
+    width: 700px;
+    bottom: -70px;
+    z-index: -1;
+    opacity: .8;
+  
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+  }
+  
+  
+  .slider .container .sliderLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+  
+    .title {
+      color: #fff;
+      font-family: "Alfa Slab One";
+      font-weight: 100;
+      font-size: 55px;
+      margin-bottom: 4px;
+    }
+  
+    .sliderDescription {
+      color: #ffffffc1;
+      font-family: "Raleway";
+      font-weight: 100;
+      font-size: 26px;
+      margin: 0 0 15px 0;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      text-align: center;
+      margin-top: -5em;
+  
+      .title {
+        font-size: 40px;
+      }
+  
+      .sliderDescription {
+        font-size: 18px;
+      }
+  
+      .sliderDescription:nth-of-type(2) {
+        margin-bottom: 3em;
+      }
+    }
+  }
+  
+  .slider .container .sliderRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+  
+    .sliderImage {
+      max-width: 80%;
+      height: auto;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5em;
+  
+      .sliderImage {
+        max-width: 80%;
+      }
+    }
+  }
+  
+  
+  /*********** GET OFFER ***********/
+  
+  .getOffer {
+    max-width: calc(1300px - 16px);
+    margin: -5em auto 3em auto;
+    padding: 0 8px;
+    box-shadow: 1px 1px 15px #0000001a;
+    position: relative;
+    background: #fff;
+    padding: 2em 2em;
+    text-align: center;
+    z-index: 9;
+  
+    .line {
+      width: 60px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: -30px;
+    }
+  
+    .getOfferBg {
+      position: absolute;
+      font-size: 10em;
+      font-family: "Alfa Slab One";
+      opacity: .04;
+      top: -100px;
+      left: -50px;
+      z-index: 9999;
+    }
+  
+    .titel {
+      font-family: "Alfa Slab One";
+      font-weight: 100;
+      font-size: 42px;
+      margin: 0 0 10px 0;
+  
+      @media screen and (max-width: 1000px) {
+        font-size: 25px;
+      }
+    }
+  
+    .description {
+      margin: 0 0 20px 0;
+    }
+  
+    .inquiryForm {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+  
+      .inquiryFormDiv {
+        width: calc(50% - 1em);
+        margin: .5em;
+  
+        .formControl {
+          width: 100%;
+          padding: 15px 10px;
+          border-radius: 5px;
+          border: 1px solid #b1b1b1;
+        }
+  
+        .formControl:focus {
+          outline: 2px solid var(--primary);
+        }
+      }
+  
+      .inquiryFormDiv:nth-of-type(5) {
+        width: 100%;
+      }
+  
+      .inquiryFormDiv:nth-of-type(6) {
+        width: 100%;
+      }
+    }
+  }
+  
+  
+  /********* VALUES *********/
+  
+  .companyValue {
+    .container {
+      max-width: 1300px;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      padding: 8px;
+      flex-wrap: wrap;
+    }
+  }
+  
+  
+  /*********** About ***********/
+  
+  .aboutUs {
+    position: relative;
+    margin-top: 3em;
+  
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+  
+      .aboutUsLeft,
+      .aboutUsRight {
+        width: 100%;
+        padding: 1em;
+      }
+  
+      .aboutUsLeft {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+    }
+  }
+  
+  .aboutUsBg {
+    font-family: var(--title-font);
+    position: absolute;
+    top: -80px;
+    left: -130px;
+    opacity: .035;
+    font-size: 150px;
+    z-index: 99;
+  }
+  
+  .aboutUsLeft {
+    width: 45%;
+    padding-right: 1.5em;
+  }
+  
+  .aboutUsRight {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  
+  /********* CONSULT ************/
+  
+  .consultUs {
+    background: rgba(243, 243, 243, 0.481);
+    padding: 1.5em 0;
+    margin: 2.5em 0;
+  
+    .consultTitle {
+      font-size: 44px;
+      font-family: var(--title-font);
+      font-weight: 100;
+    }
+  }
+  
+  .consultUsLeft {
+    width: 70%;
+  }
+  
+  .consultDescription {
+    margin: .75em 0;
+  }
+  
+  .consultUsRight {
+    width: 30%;
+  }
+  
+  .consultImage {
+    max-width: 85%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .consultUs {
+      flex-direction: column;
+    }
+  
+    .consultUsLeft,
+    .consultUsRight {
+      width: 100%;
+      text-align: center;
+      margin: 1.5em 0;
+    }
+  
+    .consultTitle {
+      font-size: 30px !important;
+    }
+  }
+  
+  
+  
+  /********* Steps ************/
+  
+  .steps {
+    text-align: center;
+    width: 100%;
+  
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin: 4em 0;
+      justify-content: center;
+    }
+  
+    .box {
+      width: 33.33%;
+      height: 150px;
+      text-align: center;
+      font-family: var(--text-font);
+      position: relative;
+  
+      .boxBg {
+        color: #008bee1f;
+        font-size: 20px;
+        font-family: var(--title-font);
+        display: inline-block;
+        margin-right: 7px;
+      }
+  
+      .boxP {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .description {
+        margin-left: 7px;
+        margin-top: 10px;
+        display: inline-block;
+      }
+    }
+  }
+  
+  
+  /********* COSTS ************/
+  
+  .costs {
+    flex-direction: column;
+  
+    .costsContainer {
+      margin: 3.5em 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .costsBox {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      border-right: 1px dotted #dddddd;
+    }
+  
+    .costsBox:last-of-type {
+      border: none;
+    }
+  
+    .costsTitle {
+      font-weight: bold;
+    }
+  
+    .costsPrice {
+      color: var(--primary);
+      font-weight: bold;
+    }
+  
+    .description {
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .costsBox {
+      width: 50% !important;
+      margin: 0 0 3em 0;
+    }
+  
+    .costsBox:nth-of-type(2) {
+      border: none;
+    }
+  }
+  
+  
+  
+  /********* QUESTIONS ***********/
+  
+  .mt {
+    margin-top: 4em;
+  }
